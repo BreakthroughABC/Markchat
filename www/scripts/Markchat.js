@@ -11,7 +11,7 @@ Markchat.prototype = {
     constructor : Markchat,
     init : function () {
         var that = this;
-        this.socket = io.connect('http://localhost');
+        this.socket = io.connect('http://47.94.201.41');
         this.socket.on('connect', function () {
             document.getElementById('info').textContent =
                 'get yourself a nickname :';
