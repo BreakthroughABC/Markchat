@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="Uto">
+    <meta name="description" content="Markchat | a markup
+chat application built with nodejs and express">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Markchat</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="banner">
+			<h1>Markchat</h1>
+			<span id="intro">A markup chat app built with nodejs</span>
+		</div>
+		<div class="statusDiv">
+			<p id="status"></p>
+		</div>
+		<div id="historyMsg">
+		</div>
+		<div class="controls">
+			<div class="items">
+				<input id="colorStyle" type="color"
+				       placeholder="#000" title="font color"/>
+				<label for="sendImage" class="imageLable">
+					<input type="button" value="image"/>
+					<input id="sendImage" type="file"
+						value="image"/>
+				</label>
+				<input id="clearBtn" type="button"
+				       value="clear" title="clear screen"/>
+			</div>
+			<textarea id="messageInput" placeholder="Enter to send">
+			</textarea>
+			<input id="sendBtn" type="button" value="SEND">
+			<div id="emojiWrapper">
+			</div>
+		</div>
+	</div>
+	<div id="loginWrapper">
+		<p id="info">connecting to server...</p>
+		<div id="nickWrapper">
+			<input type="text" placeholder="nickname"
+			       id="nicknameInput"/>
+			<input type="button" value="OK" id="loginBtn"/>
+		</div>
+	</div>
+    <script src="/socket.io/socket.io.js"></script>
+	<script src="scripts/Markchat.js"></script>
+</body>
+</html>
