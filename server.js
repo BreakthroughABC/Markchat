@@ -29,4 +29,7 @@ io.on('connection', function (socket) {
     socket.on('postMsg', function (msg) {
         socket.broadcast.emit('newMsg', socket.nickname, msg);
     });
+    socket.on('img', function (imgData) {
+        socket.broadcast.emit('newImg', socket.nickname, imgData);
+    });
 });
