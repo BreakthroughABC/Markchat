@@ -60,7 +60,7 @@ Markchat.prototype = {
             document.getElementById('status').textContent = userCount +
                 (userCount > 1 ? ' users' : ' user') + ' online';
         });
-        this.socket.on('newMsg', function (user, msg) {
+        this.socket.on('newMsg', function (user, msg, color) {
             that._displayNewMsg(user, msg, color);
         });
         document.getElementById('sendImage').addEventListener('change',
